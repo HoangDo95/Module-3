@@ -49,23 +49,18 @@ create table ct_dh(
     foreign key (id_vt) references vat_tu(ma_vt)
 );
 
-create table sdt_ncc(
-	ma_ncc int primary key,
-    sdt varchar(20)
-);
-
 create table nha_cc(
 	ma_ncc int primary key auto_increment, 
 	ten_ncc varchar(50),
     dia_chi varchar(50),
-    id_sdt_ncc int,
     id_ncc int,
-    foreign key (id_ncc) references don_dh(so_dh),
-    foreign key (id_sdt_ncc) references sdt_ncc(ma_ncc)
+    foreign key (id_ncc) references don_dh(so_dh)
 );
 
-
-
-
-
+create table sdt_ncc(
+	ma_ncc int primary key,
+    sdt varchar(20),
+    id_ncc int,
+    foreign key(id_ncc) references nha_cc(ma_ncc)
+);
 

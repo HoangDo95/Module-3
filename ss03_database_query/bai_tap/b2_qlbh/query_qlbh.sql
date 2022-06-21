@@ -4,7 +4,7 @@ use ss03_b2_quan_ly_bh;
 select o_id, o_date, o_tolal_price from `order`;
 
 -- Hiển thị danh sách các khách hàng đã mua hàng, và danh sách sản phẩm được mua bởi các khách
-select customer.c_name, product.p_name 
+select c.c_name, p.p_name 
 from customer c
 join `order` o on c.c_id = o.c_id
 join order_detail od on od.o_id = o.o_id

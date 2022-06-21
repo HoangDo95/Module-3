@@ -30,7 +30,3 @@ create table order_detail(
     foreign key (id_order) references `order`(o_id),
     foreign key (id_product) references product(p_id)
 );
-
-
-
-

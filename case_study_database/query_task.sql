@@ -6,7 +6,7 @@ where (ho_ten like "h%" or ho_ten like "t%" or ho_ten like "k%" ) and char_lengt
 
 -- task 3
 select * from khach_hang 
-where ((year(now()) - year(ngay_sinh) between 18 and 50) and (dia_chi like "%Đà Nẵng" or dia_chi like "%Quảng Trị")); 
+where ((year(curdate()) - year(ngay_sinh) between 18 and 50) and (dia_chi like "%Đà Nẵng" or dia_chi like "%Quảng Trị")); 
  
  -- task 4
  select kh.ma_khach_hang, kh.ho_ten, count(kh.ma_khach_hang) as so_lan_dat_phong from loai_khach lk
@@ -65,7 +65,7 @@ group by khach_hang.ho_ten;
 
 -- task 9
 select month(hd.ngay_lam_hop_dong) , count(hd.ngay_lam_hop_dong) as so_luong_khach_hang from hop_dong hd
-where  year(hd.ngay_lam_hop_dong) = 2021
+where year(hd.ngay_lam_hop_dong) = 2021
 group by month(hd.ngay_lam_hop_dong) 
 order by month(hd.ngay_lam_hop_dong);
 
@@ -115,7 +115,7 @@ order by ma_hop_dong ;
 select nv.ma_nhan_vien, nv.ho_ten, td.ten_trinh_do, bp.ten_bo_phan, nv.so_dien_thoai, nv.dia_chi from bo_phan bp
 join nhan_vien nv on bp.ma_bo_phan = nv.ma_bo_phan
 join trinh_do td on nv.ma_trinh_do = td.ma_trinh_do
-join hop_dong hd on nv.ma_nhan_vien =  hd.ma_nhan_vien
+left join hop_dong hd on nv.ma_nhan_vien =  hd.ma_nhan_vien
 where year(hd.ngay_lam_hop_dong) between 2020 and 2021
 group by nv.ma_nhan_vien
 having count(hd.ma_nhan_vien) <= 3 

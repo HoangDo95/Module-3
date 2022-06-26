@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e09d17e9-921c-44fe-b0df-90b1fdbba904" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ss08_bootstrap/bai_tap/b1/b1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss08_bootstrap/thuc_hanh/bootstrap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss08_bootstrap/thuc_hanh/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_database/query_task.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_database/query_task.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss07_/bai_tap/b2/b2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss07_/bai_tap/b2/b2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss07_/bai_tap/b2/css_b2.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ss07_/bai_tap/b2/css_b2.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2B0V7SdT3c2afNyY8su0EciQpSz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e09d17e9-921c-44fe-b0df-90b1fdbba904" name="Default Changelist" comment="" />
+      <created>1656042821481</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656042821481</updated>
+      <workItem from="1656042850156" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

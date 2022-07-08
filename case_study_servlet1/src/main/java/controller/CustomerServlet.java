@@ -90,49 +90,49 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void createCustomer(HttpServletRequest request, HttpServletResponse response) {
-//        Map<String, String> validate = customerService.validate(request, response);
-//        if (validate.isEmpty()) {
-//            customerTypeList = cusTypeService.findAll();
-//            request.setAttribute("customerTypeList", customerTypeList);
-//
-//            customerList = customerService.findAll();
-//            request.setAttribute("customerList", customerList);
-//            request.setAttribute("smg", "Add new successful");
-//            try {
-//                request.getRequestDispatcher("view/customer/list.jsp").forward(request, response);
-//            } catch (ServletException e) {
-//                e.printStackTrace();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        } else {
-//            try {
-//                request.setAttribute("validate", validate);
-//                request.getRequestDispatcher("view/customer/list.jsp").forward(request, response);
-//            } catch (ServletException e) {
-//                e.printStackTrace();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
+        Map<String, String> validate = customerService.validate(request, response);
+        if (validate.isEmpty()) {
 
-
-        int idCT = Integer.parseInt(request.getParameter("idCT"));
-        String name = request.getParameter("name");
-        String dayOfBirth = request.getParameter("dayOfBirth");
-        int gender = Integer.parseInt(request.getParameter("gender"));
-        String idCard = request.getParameter("idCard");
-        String phone = request.getParameter("phone");
-        String email = request.getParameter("email");
-        String address = request.getParameter("address");
-
-        Customer customer = new Customer(idCT, name, dayOfBirth, gender, idCard, phone, email, address);
-        customerService.create(customer);
-        try {
-            response.sendRedirect("/customer");
-        } catch (IOException e) {
-            e.printStackTrace();
+            customerList = customerService.findAll();
+            request.setAttribute("customerList", customerList);
+            request.setAttribute("smg", "Add new successful");
+            try {
+                request.getRequestDispatcher("view/customer/list.jsp").forward(request, response);
+            } catch (ServletException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                customerTypeList = cusTypeService.findAll();
+                request.setAttribute("customerTypeList", customerTypeList);
+                request.setAttribute("validate", validate);
+                request.getRequestDispatcher("view/customer/create.jsp").forward(request, response);
+            } catch (ServletException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+
+
+//        int idCT = Integer.parseInt(request.getParameter("idCT"));
+//        String name = request.getParameter("name");
+//        String dayOfBirth = request.getParameter("dayOfBirth");
+//        int gender = Integer.parseInt(request.getParameter("gender"));
+//        String idCard = request.getParameter("idCard");
+//        String phone = request.getParameter("phone");
+//        String email = request.getParameter("email");
+//        String address = request.getParameter("address");
+//
+//        Customer customer = new Customer(idCT, name, dayOfBirth, gender, idCard, phone, email, address);
+//        customerService.create(customer);
+//        try {
+//            response.sendRedirect("/customer");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     private void showEdit(HttpServletRequest request, HttpServletResponse response) {

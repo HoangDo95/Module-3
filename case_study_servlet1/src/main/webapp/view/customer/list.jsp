@@ -13,7 +13,7 @@
 <h1>Customer List</h1>
 <a href="/customer?action=create">Create Customer</a>
 
-<div align="center" class="container-fluid">
+<div class="container-fluid">
     <table class="table text-center table-striped" id="table">
         <thead>
         <tr>
@@ -41,14 +41,12 @@
                 </c:forEach>
                 <td> ${customer.name}</td>
                 <td> ${customer.dayOfBirth}</td>
-<%--                           <td> ${customer.gender}</td>--%>
                 <c:if test="${customer.gender == 0}">
                     <td>Male</td>
                 </c:if>
                 <c:if test="${customer.gender == 1}">
                     <td>Female</td>
                 </c:if>
-
                 <td> ${customer.idCard}</td>
                 <td> ${customer.phoneNumber}</td>
                 <td> ${customer.email}</td>

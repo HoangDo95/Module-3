@@ -19,6 +19,6 @@ public interface CustomerService {
 
     void delete(int id);
 
-//    Map<String, String> validate(HttpServletRequest request, HttpServletResponse response);
+    Map<String, String> validate(HttpServletRequest request, HttpServletResponse response);
 
 }

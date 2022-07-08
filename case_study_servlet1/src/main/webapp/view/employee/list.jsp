@@ -11,14 +11,15 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/boostrap/bootstrap413/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/boostrap/datatables/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="/boostrap/bootstrap413/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/boostrap/datatables/css/dataTables.bootstrap4.min.css"/>
 
 </head>
 <body>
-<h1>Employee List</h1>
-<a href="/employee?action=create">Create Employee</a>
-
+<div class="container-fluid">
+    <h1>Employee List</h1>
+    <a href="/employee?action=create">Create Employee</a><br>
+    <a href="/home">Back Home</a>
     <table class="table text-center table-striped" id="table">
         <thead>
         <tr>
@@ -63,7 +64,37 @@
         </c:forEach>
         </tbody>
     </table>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
 
+        <form action="/employee" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Xóa Employee</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- id trung voi serverlet xoa-->
+                    <input type="text" hidden name="idE" id="idDelete">
+                    <input type="text" hidden name="action" value="delete">
+                    <san>Bạn có muốn xóa khách hàng: </san>
+                    <span id="nameDelete"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Không Xóa</button>
+                    <button type="submit" class="btn btn-primary">Xóa</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function infoDelete(id, name) {
+        document.getElementById("idDelete").value = id;
+        document.getElementById("nameDelete").innerText = name;
+    }
+</script>
 
 <script src="/boostrap/jquery/jquery-3.5.1.min.js"></script>
 <script src="/boostrap/datatables/js/jquery.dataTables.min.js"></script>
@@ -80,7 +111,7 @@
         $('#table').dataTable({
             "dom": 'lrtip',
             "lengthChange": false,
-            "pageLength": 5
+            "pageLength": 4
         });
     })
 </script>
